@@ -1,5 +1,4 @@
 // frontend/src/components/LoginFormPage/index.js
-
 import React, { useState } from 'react';
 import * as sessionActions from '../../store/session';
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,13 +7,12 @@ import './LoginForm.css';
 
 function LoginFormPage() {
   const dispatch = useDispatch();
-  const currentSession = useSelector(state => state.session.user);
-  // console.log("what is happening", currentSession)
+  const sessionUser = useSelector(state => state.session.user);
   const [credential, setCredential] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState([]);
 
-  if (currentSession) return (
+  if (sessionUser) return (
     <Redirect to="/" />
   );
 
@@ -34,7 +32,7 @@ function LoginFormPage() {
         {errors.map((error, idx) => <li key={idx}>{error}</li>)}
       </ul>
       <label>
-        Username / Email
+        Username or Email
         <input
           type="text"
           value={credential}
