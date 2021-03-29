@@ -17,7 +17,7 @@ EventNoire is a site where Hosts can post events, sell tickets and generate a fo
 * Logged in Hosts can delete and edit event time, details, ticket prices
 * Logged in Users can purchase and grab tix.
 * On the homepage, all Hosts/Users will see most recent events
-* On the homepage, Hosts will see a box where a new event can be created
+* On the homepage, logged in Hosts will see a box where a new event can be created
 
 ## 4. Searching for events
 
