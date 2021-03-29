@@ -58,5 +58,3 @@
 * `hostId` references `hosts` table
 * `eventId` references `events` table
 * `userId` references `users` table
-
-
