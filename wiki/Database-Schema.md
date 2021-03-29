@@ -35,7 +35,7 @@
 | eventTitle  | string    | not null              |
 | content     | string    | not null              |
 | hostId      | integer   | not null, foreign key |
-| noOfTix     | integer   | not null,             |
+| numTickets  | integer   | not null,             |
 | eventDate   | datetime  | not null              |
 | eventStart  | datetime  | not null              |
 | eventEnd    | datetime  | not null              |
@@ -50,18 +50,13 @@
 |---------------|-----------|-----------------------|
 | id            | integer   | not null, primary key |
 | hostId        | integer   | not null, foreign key |
-| eventTitle    | string    | not null, foreign key |
 | eventId       | integer   | not null, foreign key |
-| eventDate     | datetime  | not null, foreign key |
-| eventStart    | datetime  | not null, foreign key |
-| eventEnd      | datetime  | not null, foreign key |
+| userId        | integer   | not null, foreign key |
 | created_at    | datetime  | not null              |
 | updated-at    | datetime  | not null              |
 
 * `hostId` references `hosts` table
 * `eventId` references `events` table
-* `eventTitle` references `events` table
-* `eventDate` references `events` table
-* `eventStart` references `events` table
-* `eventEnd` references `events` table
+* `userId` references `users` table
+
 
