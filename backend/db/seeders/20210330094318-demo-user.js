@@ -1,12 +1,11 @@
-// backend/db/seeders/demo-user.js
-'use strict';
+// db/seeders/demo-user.js
 
+'use strict';
 const faker = require('faker');
 const bcrypt = require('bcryptjs');
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    
     return queryInterface.bulkInsert('Users', [
       {
         email: 'demo@user.io',

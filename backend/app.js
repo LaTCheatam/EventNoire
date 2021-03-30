@@ -9,41 +9,43 @@ const helmet = require('helmet');
 const cookieParser = require('cookie-parser');
 
 const { environment } = require('./config');
-const { contentSecurityPolicy } = require('helmet');
 const isProduction = environment === 'production';
+
 
 const app = express();
 const { ValidationError } = require('sequelize');
 
+
 app.use(morgan('dev'));
+
 app.use(cookieParser());
 app.use(express.json());
 
 
-
 // Security Middleware
 if (!isProduction) {
-    app.use(cors());  //enable cors only in developement;
+  // enable cors only in development
+  app.use(cors());
 }
-
-app.use(helmet({        //helmet helps set a variety of header to better secure your app.
-    contentSecurityPolicy: false
+// helmet helps set a variety of headers to better secure your app
+app.use(helmet({
+  contentSecurityPolicy: false
 }));
 
 // Set the _csrf token and create req.csrfToken method
 app.use(
-    csurf({
-        cookie: {
-            secure: isProduction,
-            someSite: isProduction && "Lax",
-            httpOnly: true,
-        }
-    })
-)
+  csurf({
+    cookie: {
+      secure: isProduction,
+      sameSite: isProduction && "Lax",
+      httpOnly: true,
+    },
+  })
+  );
+  
+  app.use(routes); // Connect all the routes
 
-app.use(routes);        // connect all the routes and need to come behind the others.
-
-// Catch unhandled requests and forward to error handler.
+  // Catch unhandled requests and forward to error handler.
 app.use((_req, _res, next) => {
   const err = new Error("The requested resource couldn't be found.");
   err.title = "Resource Not Found";
@@ -52,13 +54,14 @@ app.use((_req, _res, next) => {
   next(err);
 });
 
+// Process sequelize errors
 app.use((err, _req, _res, next) => {
-    if (err instanceof ValidationError) { //check if error is Sequelize error:
-        err.errors = err.errors.map((e) => e.message);
-        err.title = 'Validation error';
-
-    }
-    next(err);
+  // check if error is a Sequelize error:
+  if (err instanceof ValidationError) {
+    err.errors = err.errors.map((e) => e.message);
+    err.title = 'Validation error';
+  }
+  next(err);
 });
 
 // Error formatter
@@ -72,5 +75,7 @@ app.use((err, _req, res, _next) => {
     stack: isProduction ? null : err.stack,
   });
 });
+
+
 
 module.exports = app;
