@@ -24,7 +24,16 @@ EventNoire is a site where Hosts can post events, sell tickets and generate a fo
 * Anyone can search for events & use the search with included words/ phrase
 * Users can refine searches by date (most recent) 
 
-## 5. Production README
+## 5. Registration / Tickets
+
+* Logged in Users can purchase and grab tix.
+
+## 6. Bookmark/Promote events
+
+* Logged in Users can promote events
+* Logged in Users can bookmark events
+  
+## 7. Production README
 
 * Brief explanation of what the app is and does.
 * How to start development environment
@@ -35,7 +44,7 @@ EventNoire is a site where Hosts can post events, sell tickets and generate a fo
 * Discussion of both challenges faced and the way the team solved them
 * Code snippets to highlight the best code
 
-## 6. Bonus features
+## 8. Bonus features
 
 * When purchasing tix for event users can share with social media.
 * Hosts can use tools to send out mass marketing emails.
