@@ -88,9 +88,9 @@ User.signup = async function ({ username, email, password }) {
 };
 
 User.associate = function(models) {
-    User.hasMany(models.Events, { foreignKey:'userId'});
-    User.hasMany(models.Promotes, { foreignKey:'userId'})
-    User.belongsToMany(models.Event, { through: 'Promotes', foreignKey:'userId', otherKey:'eventId'});
+    User.hasMany(models.Event, { foreignKey:'userId'});
+    User.hasMany(models.Promote, { foreignKey:'userId'})
+    // User.belongsToMany(models.Event, { through: 'Promotes', foreignKey:'userId', otherKey:'eventId'});
     User.hasMany(models.Ticket, {foreignKey:'userId'})
   };
   return User;
