@@ -1,12 +1,16 @@
-
+div#signupFormPage {
+    display: flexbox;
+    position: relative;
+    margin-left: 40vw;
+}
 
 .signupFormPage {
     /* background-color: thistle; */
     display: flex;
-    grid-column-start: 2;
+    /* grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 3;
-    grid-row-end: 3;
+    grid-row-end: 3; */
     flex-direction: column;
     height: 100vh;
     place-self: center;
@@ -16,9 +20,9 @@
 
 
 .signup-inputs {
-    /* margin-top: 20vh; */
-    /* margin-right: 120px; */
-    height: 350px;
+    margin-top: 20vh;
+    margin-right: 120px;
+    height: 300px;
     width: 350px;
     box-sizing: border-box;
     border: 1px solid #DF553D;
@@ -35,12 +39,13 @@
     border-radius: 2px;
     background-color: #11c0d7;
     color: #eff1f3;
-    margin-top: 18px;
+    margin-top: 5px;
     width: 100px;
     height: 30px;
     box-shadow: 0 0 4px rgb(167, 129, 74);
     cursor: progress;
     font-weight: 700;
+    margin-left: 75px;
 
 }
 

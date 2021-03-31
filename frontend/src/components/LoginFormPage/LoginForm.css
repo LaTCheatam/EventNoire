@@ -1,10 +1,15 @@
+div#loginFormPage {
+    display: flexbox;
+    position: relative;
+    margin-left: 35vw;
+}
 .loginFormPage {
     /* background-color: thistle; */
     display: flex;
-    grid-column-start: 2;
+    /* grid-column-start: 2;
     grid-column-end: 4;
     grid-row-start: 3;
-    grid-row-end: 3;
+    grid-row-end: 3; */
     flex-direction: column;
     height: 100vh;
     place-self: center;
@@ -24,7 +29,7 @@
     display: grid;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .login-btn {
@@ -37,23 +42,28 @@
     box-shadow: 0 0 2px black;
     cursor: pointer;
     font-weight: 700;
-    position: center;
+    margin-left: 83px;
+    
+
 
 }
 
 .username-input {
-    color: whitesmoke;
+    color: rgb(202, 6, 6);
+    padding: 2px;
+    padding-top: 1vw;
+
 }
 
 .demo-btn {
     border-radius: 2px;
     background-color: #11d732;
     color: #eff1f3;
-    margin-top: 18px;
+    /* margin-top: 18px; */
     width: 100px;
     height: 30px;
     box-shadow: 0 0 2px rgb(179, 170, 49);
     cursor: progress;
     font-weight: 700;
-
+    margin-left: 83px;
 }
