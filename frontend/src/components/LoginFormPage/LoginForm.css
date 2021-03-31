@@ -23,9 +23,9 @@ div#loginFormPage {
     height: 350px;
     width: 350px;
     box-sizing: border-box;
-    border: 1px solid #DF553D;
-    background-color: #b38a1acb;
-    color: #eff1f3;
+    border: 1px solid #891277;
+    background-color: #F0E9DC;
+    color: #fffcf2;
     display: grid;
     flex-direction: column;
     justify-content: center;
@@ -34,13 +34,13 @@ div#loginFormPage {
 
 .login-btn {
     border-radius: 2px;
-    background-color: #11c0d7;
-    color: #eff1f3;
+    background-color: #891277;
+    color: #fffcf2;
     margin-top: 18px;
     width: 100px;
     height: 30px;
-    box-shadow: 0 0 2px black;
-    cursor: pointer;
+    box-shadow: 0 0 2px FFFCF2;
+    cursor: progress;
     font-weight: 700;
     margin-left: 83px;
     
@@ -49,7 +49,7 @@ div#loginFormPage {
 }
 
 .username-input {
-    color: rgb(202, 6, 6);
+    color: #891277;
     padding: 2px;
     padding-top: 1vw;
 
@@ -57,12 +57,13 @@ div#loginFormPage {
 
 .demo-btn {
     border-radius: 2px;
-    background-color: #11d732;
-    color: #eff1f3;
+    background-color: #3E87E0;
+    color: #fffcf2;
     /* margin-top: 18px; */
     width: 100px;
     height: 30px;
-    box-shadow: 0 0 2px rgb(179, 170, 49);
+    box-shadow: 0 0 2 px #fffcf2;
+
     cursor: progress;
     font-weight: 700;
     margin-left: 83px;
