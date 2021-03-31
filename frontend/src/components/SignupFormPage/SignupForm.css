@@ -1,8 +1,10 @@
-body {
-    background-color: wheat;
+
+
+.signupFormPage {
+    /* background-color: thistle; */
     display: flex;
-    grid-column-start: 3;
-    grid-column-end: 5;
+    grid-column-start: 2;
+    grid-column-end: 4;
     grid-row-start: 3;
     grid-row-end: 3;
     flex-direction: column;
@@ -10,24 +12,25 @@ body {
     place-self: center;
     font-family: system-ui;
     margin-left: 40vw;
-    padding: 7px;
 }
 
+
 .signup-inputs {
-    margin-top: 20vh;
+    /* margin-top: 20vh; */
+    /* margin-right: 120px; */
     height: 350px;
     width: 350px;
     box-sizing: border-box;
     border: 1px solid #DF553D;
-    background-color: #bca0e4;
+    background-color: #b38a1acb;
     color: #eff1f3;
-    display: flex;
+    display: grid;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 5px;
 
 }
+
 .signup-btn {
     border-radius: 2px;
     background-color: #11c0d7;
@@ -35,27 +38,38 @@ body {
     margin-top: 18px;
     width: 100px;
     height: 30px;
-    box-shadow: 0 0 2px black;
-    cursor: pointer;
+    box-shadow: 0 0 4px rgb(167, 129, 74);
+    cursor: progress;
     font-weight: 700;
 
 }
 
 .username-input {
     color: rgb(202, 6, 6);
-    padding: 1vw 1vw;
-    /* padding-top: 1vw; */
+    padding: 2px;
+    justify-content: space-around;
+    padding-top: 1vw;
 }
 
 .password-in {
     color: rgb(202, 6, 6);
-    padding: 1vw 1vw;
-    /* padding-top: 1vw; */
+    padding: 2px;
+    padding-top: 1vw;
+}
+
+.the-in {
+    margin-left: 4px;
+}
+
+.cfm-password-in {
+    color: rgb(202, 6, 6);
+    padding: 2px;
+    padding-top: 1vw;
 }
 
 .email-in {
     color: rgb(202, 6, 6);
-    padding: 1vw;
+    /* padding: 1vw; */
     /* padding-top: 1vw; */
 }
 
