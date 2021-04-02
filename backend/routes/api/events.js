@@ -19,12 +19,12 @@ router.get ('/',
 router.post ('/',
     asyncHandler(async (req, res) => {
         const { eventTitle, userId, content, numTickets, eventDate, eventStart, eventEnd } = req.body;
-        console.log(req.body,'the things')
-        // const event = await Event.create({ eventTitle, userId, content, numTickets, eventDate: new Date(), eventStart: '14:30:00' , eventEnd: '22:30:00' });
+        // console.log(req.body,'the things')
+        const event = await Event.create({ eventTitle, userId, content, numTickets, eventDate: new Date(), eventStart, eventEnd });
 
-        // return res.json({
-        //     event,
-        // });
+        return res.json({
+            event,
+        });
     }),
 );
 
