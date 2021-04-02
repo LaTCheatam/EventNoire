@@ -1,3 +1,11 @@
+h2.event-form-title {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    margin-left: 45vw;
+    color: #225452;
+}
+
 div.event-form-inputs {
     display: flex;
     flex-direction: column;
@@ -24,7 +32,7 @@ div.event-form-contents{
     align-items: center;
 }
 
-button {
+button.event-create-btn {
     width: 150px;
     align-items: center;
     margin-left: 5vw;

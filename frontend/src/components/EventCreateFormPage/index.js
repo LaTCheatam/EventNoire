@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 import { createEvent } from '../../store/events';
-// import eventDatePicker from './eventDatePicker'
+
 
 const EventCreateForm = () => {
     const sessionUser = useSelector(state => state.session.user)
@@ -39,14 +39,11 @@ const EventCreateForm = () => {
         }
     };
 
-   
-        // let currentDate = new Date().toLocaleDateString();
-        // currentDate = currentDate.slice(0, 16);
     
 
     return (
         <div className='event-form-container'>
-            <h2>Create An Event</h2>
+            <h2 className='event-form-title'>Create An Event</h2>
             <form onSubmit={handleSubmit} className='event-form-inputs'>
             <div className='event-form-contents'>
                 <label id='the-labels'>Title</label>
@@ -61,7 +58,7 @@ const EventCreateForm = () => {
                 <input type='datetime-local' placeholder='Set an end' value={endTime} onChange={(event) => setEndTime(event.target.value)} /> 
     
                 <p>You're almost to the end. Nicely done!</p>
-                <button type='submit'>Create Your Event</button>
+                <button className='event-create-btn' type='submit'>Create Your Event</button>
             </div> 
             </form>           
         </div>

@@ -12,7 +12,14 @@ const router = express.Router();
 // Fetch all events
 router.get ('/', 
     asyncHandler(async (req, res) => {
-    res.send('hello events')
+    const eventInd = await Event.findAll({
+        include: [eventTitle, content, eventStart]
+    });
+
+    res.render('events', {
+        title: 'Events',
+        events
+    })
     })
 )
 
@@ -20,11 +27,11 @@ router.post ('/',
     asyncHandler(async (req, res) => {
         const { eventTitle, userId, content, numTickets, eventDate, eventStart, eventEnd } = req.body;
         // console.log(req.body,'the things')
-        const event = await Event.create({ eventTitle, userId, content, numTickets, eventDate: new Date(), eventStart, eventEnd });
+        // const event = await Event.create({ eventTitle, userId, content, numTickets, eventDate: new Date(), eventStart, eventEnd });
 
-        return res.json({
-            event,
-        });
+        // return res.json({
+        //     event,
+        // });
     }),
 );
 

@@ -56,11 +56,11 @@ export const createEvent = (data) => async dispatch => {
     body: JSON.stringify(data),
   });
 
-  // if (response.ok) {
-  //   const event = await response.json();
-  //   console.log(event)
-  //   // dispatch(addEvent(event));
-  // }
+  if (response.ok) {
+    const event = await response.json();
+    console.log(event)
+    // dispatch(addEvent(event));
+  }
 };
 
 export const renewEvent = data => async dispatch => {

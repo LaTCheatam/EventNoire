@@ -65,46 +65,33 @@ button {
 
 .dropdown:hover .dropdown-content {
     display: block;
-} */
+} 
 
 
 
 /* DIV CONTAINING ALL THE NAVBAR ELEMENTS */
 /* grid-area: <row-start> / <column-start> / <row-end> / <column-end> */
-/* .profile-dropdown {
+
+.profile-dropdown {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-around;
     color: #88C1EB;
     max-width: 1920px;
 }
 
-
-.fas-btn {
+.logout-btn {
     border-radius: 2px;
-    background-color: #11c0d7;
-    color: #6d151c;
+    background-color: #225452;
+    color: #FFFCF2;
     margin-top: 18px;
-    width: 100px;
-    height: 30px;
+    width: 75px;
+    height: 20px;
     box-shadow: 0 0 2px black;
     cursor: pointer;
     font-weight: 700;
 
 }
-
-.logout-btn {
-    border-radius: 2px;
-    background-color: #11c0d7;
-    color: #c2a110;
-    margin-top: 18px;
-    width: 100px;
-    height: 30px;
-    box-shadow: 0 0 2px black;
-    cursor: pointer;
-    font-weight: 700;
-
-} */
 
 
