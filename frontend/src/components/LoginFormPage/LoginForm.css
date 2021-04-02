@@ -42,17 +42,23 @@ div#loginFormPage {
     box-shadow: 0 0 2px FFFCF2;
     cursor: progress;
     font-weight: 700;
-    margin-left: 83px;
+    /* margin-left: 60px; */
+    justify-self: center;
     
 
 
 }
 
+div.username-container {
+    margin-top: 4vh;
+    
+}
+
 .username-input {
     color: #891277;
-    padding: 2px;
-    padding-top: 1vw;
-
+    /* padding: 2px; */
+    /* padding-top: 1vw; */
+    height: 20px;
 }
 
 .demo-btn {
@@ -66,5 +72,6 @@ div#loginFormPage {
 
     cursor: progress;
     font-weight: 700;
-    margin-left: 83px;
+    /* margin-left: 83px; */
+    justify-self: center;
 }

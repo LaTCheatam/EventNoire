@@ -38,36 +38,33 @@ function SignupFormPage() {
         {errors.map((error, idx) => <li key={idx}>{error}</li>)}
       </ul>
       <label className='email-in'>
-        Email
         <input className='the-in'
-          type="text"
+          type="text" placeholder='Email'
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
       </label>
       <label className='username-input'>
-        Username
+        
         <input className='the-in'
-          type="text"
+          type="text" placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
         />
       </label>
-      <label className='password-in'>
-        Password
+      <label className='password-in'>       
         <input className='the-in'
-          type="password"
+          type="password" placeholder='Password'
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
       </label>
       <label className='cfm-password-in'>
-        Confirm Password
         <input className='the-in'
-          type="password"
+          type="password" placeholder='Confirm Password'
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
           required

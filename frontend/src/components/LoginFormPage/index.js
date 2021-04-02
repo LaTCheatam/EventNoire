@@ -33,24 +33,25 @@ function LoginFormPage() {
       <ul>
         {errors.map((error, idx) => <li key={idx}>{error}</li>)}
       </ul>
-      <label className='username-input'>
-        Username or Email
-        <input className='the-in'
-          type="text"
-          value={credential}
-          onChange={(e) => setCredential(e.target.value)}
-          required
-        />
-      </label>
-      <label className='password-in'>
-        Password
-        <input className='the-in'
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-      </label>
+      <div className='username-container'>
+        <label  className='username-input'>
+          <input className='the-in'
+            type="text" placeholder='Username or Email'
+            value={credential}
+            onChange={(e) =>  setCredential(e.target.value)}
+            required
+          />
+          </label>
+      </div>
+      <div className='flt-password-container'>
+        <label className='password-in'>
+          <input className='the-in'
+            type="password"
+            value={password} placeholder="Password"            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          </label>    
+      </div>
       <button className='login-btn' type="submit">Log In</button>
       <button className='demo-btn' type="submit">Demo</button>
     </form>

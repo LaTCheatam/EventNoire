@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/LaTCheatam/EventNoire/issues"
   },
-  "homepage": "https://github.com/LaTCheatam/EventNoire#readme"
+  "homepage": "https://github.com/LaTCheatam/EventNoire#readme",
+  "dependencies": {
+    "react-datepicker": "^3.7.0"
+  }
 }

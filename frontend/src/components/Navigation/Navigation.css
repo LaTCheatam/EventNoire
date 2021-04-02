@@ -1,3 +1,15 @@
+.nav-container {
+    background-color: #F0E9DC;
+    display:flexbox;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* justify-items: center; */
+    box-sizing: border-box;
+    height: 65px;
+    width: auto;
+}
+
 .fas-btn {
     position: relative;
     display: inline-block;
@@ -11,6 +23,21 @@
 
 }
 
+.nav-home {
+    color: rgb(33, 158, 29);
+}
+
+button {
+    margin-top: 15px;
+    color: #fffcf2;
+    background-color: #891277;
+    height: 4vh;
+    width: 8vw;
+    /* position: relative; */
+    align-items: center;
+    justify-items: center;
+}
+
 .nav-login {
     color: turquoise;
     padding: 1vw 1vw;
@@ -18,9 +45,13 @@
 .nav-signup {
     color: rgb(120, 64, 224);
 }
-.nav-home {
-    color: rgb(33, 158, 29);
+
+.nav-crevent{
+    color: turquoise;
+    padding: 1vw 1vw;
 }
+
+
 
 /* .profile-dropdown {
     display: none;

@@ -46,38 +46,44 @@ div#signupFormPage {
     box-shadow: 0 0 4 px #891277;
     cursor: progress;
     font-weight: 700;
-    margin-left: 75px;
+    /* margin-left: 75px; */
+    justify-self: center;
 
+}
+
+.the-in {
+    margin-left: 4px;
+    color: #891277;
+
+}
+.email-in {
+    color: #891277;
+    /* padding: 1vw; */
+    /* padding-top: 1vw; */
 }
 
 .username-input {
     color: #891277;
     padding: 2px;
     justify-content: space-around;
-    padding-top: 1vw;
+    /* padding-top: 1vw; */
 }
 
 .password-in {
     color: #891277;
     padding: 2px;
-    padding-top: 1vw;
+    /* padding-top: 1vw; */
 }
 
-.the-in {
-    margin-left: 4px;
-}
+
 
 .cfm-password-in {
     color: #891277;
     padding: 2px;
-    padding-top: 1vw;
-}
-
-.email-in {
-    color: #891277;
-    /* padding: 1vw; */
     /* padding-top: 1vw; */
 }
+
+
 
 
 
