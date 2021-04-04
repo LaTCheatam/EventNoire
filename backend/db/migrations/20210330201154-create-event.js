@@ -13,9 +13,13 @@ module.exports = {
         type: Sequelize.STRING(100)
       },
       userId: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.INTEGER,
         references: { model: 'Users' }
+      },
+      eventImageUrl: {
+        allowNull: true,
+        type: Sequelize.STRING
       },
       content: {
         allowNull: false,
@@ -29,13 +33,9 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       },
-      eventStart: {
-        allowNull: false,
-        type: Sequelize.TIME
-      },
       eventEnd: {
         allowNull: false,
-        type: Sequelize.TIME
+        type: Sequelize.DATE
       },
       createdAt: {
         allowNull: false,

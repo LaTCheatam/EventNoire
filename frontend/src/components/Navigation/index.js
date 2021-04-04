@@ -12,8 +12,10 @@ function Navigation({ isLoaded }){
   let sessionLinks;
   if (sessionUser) {
     sessionLinks = (
+      <>
+      <NavLink className='nav-crevent' to='/create-event'><button id='crtevt-btn' type='submit'>+ Event</button></NavLink>
       <ProfileButton user={sessionUser} />
-      
+      </>
     );
   } else {
     sessionLinks = (
@@ -29,7 +31,7 @@ function Navigation({ isLoaded }){
     <ul className='nav-container'>
       <li id='nav-content'>
         <NavLink className='nav-home' exact to="/"><button id='hm-btn' type='submit'>Home</button></NavLink>
-        <NavLink className='nav-crevent' to='/create-event'><button id='crtevt-btn' type='submit'>+ Event</button></NavLink>
+        
         {isLoaded && sessionLinks}
       </li>
     </ul>

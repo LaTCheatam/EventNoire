@@ -46,26 +46,25 @@ router.post(
 );
 
 // Demo User Login
-router.post('/demo', asyncHandler(async (req, res) => {
-  const user = await User.findOne({ where: { email: 'testHost@hostest.com' } });
+// router.post('/demo', 
+//   asyncHandler(async (req, res, next) => {
+//     const { credential, password } = req.body;
+  
+//     const user = await User.login({ credential, password });
 
+//   if (!user) {
+//     const buildDemoUser = await User.build({
+//       credential: 'testHost',
+//       password: 'Hostblah'
+//     });
+//   }
+//     await setTokenCookie(res, user);
 
-  if (!user) {
-    const buildDemoUser = await User.build({
-      username: 'testHost',
-      email: 'testHost@hostest.com',
-      hashedPassword: bcrypt.hashSync('Test123!', 10)
-    });
-
-    await buildDemoUser.save();
-
-    loginUser(req, res, buildDemoUser);
-  } else {
-    loginUser(req, res, user);
-  }
-
-  res.redirect('/');
-}));
+//     return res.json({
+//       user,
+//     });
+//   })
+// );
 
 // Log out
 router.delete(

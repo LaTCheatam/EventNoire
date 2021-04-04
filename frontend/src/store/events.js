@@ -31,6 +31,7 @@ const updateEvent = (event) => ({
     event,
 });
 
+// get all events
 export const fetchEvents = () => async (dispatch) => {
   const response = await fetch(`/api/events`);
 
@@ -40,6 +41,7 @@ export const fetchEvents = () => async (dispatch) => {
   }
 };
 
+// get single event
 export const fetchEvent = (id) => async (dispatch) => {
   const response = await fetch(`/api/events/${id}`);
 

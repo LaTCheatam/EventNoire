@@ -1,14 +1,40 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Event = sequelize.define('Event', {
-    eventTitle: DataTypes.STRING,
-    userId: DataTypes.INTEGER,
-    content: DataTypes.STRING,
-    numTickets: DataTypes.INTEGER,
-    eventDate: DataTypes.DATE,
-    eventStart: DataTypes.TIME,
-    eventEnd: DataTypes.TIME
+    eventTitle: {
+      type: DataTypes.STRING(100),
+      allowNull: false,
+    },
+    userId: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    content: {
+      type: DataTypes.STRING(255),
+      allowNull: false,
+    },
+    numTickets: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    eventImageUrl: {
+      type: DataTypes.STRING(1000),
+      allowNull: true,
+    },
+    category: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    eventDate: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
+    eventEnd: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
   }, {});
+
   Event.associate = function(models) {
     Event.belongsTo(models.User, { foreignKey:'userId'})
     // Event.hasMany(models.Ticket, {foreignKey:'eventId'})

@@ -75,3 +75,7 @@ div.username-container {
     /* margin-left: 83px; */
     justify-self: center;
 }
+
+.the-errors{
+    color: rgb(231, 18, 18);
+}

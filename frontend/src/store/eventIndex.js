@@ -1,6 +1,7 @@
 // frontend/src/store/eventIndex.js
 
 import { LOAD_EVENTS, LOAD_EVENT, REMOVE_EVENT, ADD_EVENT } from './events';
+import { csrfFetch } from './csrf';
 
 const LOAD = 'eventIndex/LOAD';
 const LOAD_TYPES = 'eventIndex/LOAD_TYPES';
@@ -22,15 +23,15 @@ const addOneEvent = event => ({
 });
 
 export const createEvent = data => async dispatch => {
-  console.log(data);
-  const response = await fetch(`/api/events`, {
+  console.log('this is data', data);
+  const response = await csrfFetch(`/api/events`, {
     method: 'post',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(data),
   });
-
+console.log(response)
   if (response.ok) {
     const event = await response.json();
     dispatch(addOneEvent(event));
