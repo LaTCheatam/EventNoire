@@ -3,16 +3,36 @@
 const express = require('express')
 const asyncHandler = require('express-async-handler');
 
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 const { Event } = require('../../db/models');
 const { check } = require('express-validator');
 const { handleValidationErrors } = require('../../utils/validation');
 
 const router = express.Router();
 
+// ROUTE FOR SEARCHING SPECIFC KEYWORDS
+router.post('/events',  asyncHandler(async (req, res) => {
+    const { query } = req.body;
+    const events = await Event.findAll({
+        where: {
+            eventTitle: {
+                [Op.iLike]: `%${query}%`   // 'Op' NEEDS TO BE IMPORTED IN ORDER FOR THIS QUERY TO WORK
+            }                               // see above at imports
+        },
+        include: [User, Event]
+    });
+
+    res.render('events', {
+        title: 'Event',
+        events,
+    });
+}));
+
 // Get all events
 router.get ('/', 
     asyncHandler(async (req, res) => {
-    const eventInd = await Event.findAll({
+    const events = await Event.findAll({
         where: [eventTitle, content, eventDate]
     });
 
@@ -33,7 +53,7 @@ router.get('/events/${id}'),
 
       res.render('events', {
         title: 'Your Event',
-        events 
+        event 
       })
     })
 

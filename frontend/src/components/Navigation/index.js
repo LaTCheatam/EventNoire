@@ -1,6 +1,7 @@
 // frontend/src/components/Navigation/index.js
 import './Navigation.css';
 import ProfileButton from './ProfileButton';
+import SearchBar from './SearchBar';
 
 import React from 'react';
 import { NavLink } from 'react-router-dom';
@@ -31,7 +32,7 @@ function Navigation({ isLoaded }){
     <ul className='nav-container'>
       <li id='nav-content'>
         <NavLink className='nav-home' exact to="/"><button id='hm-btn' type='submit'>Home</button></NavLink>
-        
+        <SearchBar />
         {isLoaded && sessionLinks}
       </li>
     </ul>

@@ -8,6 +8,8 @@ import SignupFormPage from './components/SignupFormPage';
 import * as sessionActions from './store/session';
 import Navigation from './components/Navigation';
 import EventCreateFormPage from './components/EventCreateFormPage';
+import EventSinglePage from './components/EventSinglePage';
+
 
 
 function App() {
@@ -24,6 +26,9 @@ function App() {
         <Switch>
           <Route path="/create-event">
             <EventCreateFormPage />
+          </Route>
+          <Route path="/event">
+            <EventSinglePage />
           </Route>
           <Route path="/login">
             <LoginFormPage />

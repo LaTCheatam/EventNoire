@@ -10,11 +10,23 @@
     width: auto;
 }
 
-.fas-btn {
+/* SEARCH BAR CONTAINER */
+form.search-bar-container {
+    margin-top: 20px;
+    width: 370px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    order: 3;
+}
+
+
+/* .fas-btn {
     position: relative;
     display: inline-block;
     padding: 1vw;
-}
+} */
 
 .fas fa-route {
     position: relative;
