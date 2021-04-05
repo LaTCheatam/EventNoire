@@ -12,7 +12,7 @@ const { handleValidationErrors } = require('../../utils/validation');
 
 const router = express.Router();
 
-// ROUTE FOR SEARCHING SPECIFC KEYWORDS
+// ROUTE FOR KEYWORDS SEARCH
 router.post('/events', 
   asyncHandler(async (req, res) => {
     const { query } = req.body;
@@ -33,15 +33,13 @@ router.post('/events',
 
 // Get all events
 router.get ('/', 
-    asyncHandler(async (req, res) => {
-    const events = await Event.findAll({
-        where: [eventTitle, content, eventDate]
-    });
-
-    res.render('events', {
-        title: 'Events',
-        events
-    })
+    asyncHandler(async(req, res) => {
+    const events = await Event.findAll();
+      res.json(events);
+    // res.render('events', {
+    //     title: 'Events',
+    //     events
+    // })
     })
 )
 
@@ -82,7 +80,7 @@ router.post ('/',
     validateCreateEvent,
     asyncHandler(async (req, res) => {
         const { eventTitle, userId, content, eventImageUrl, numTickets, eventDate,  eventEnd } = req.body;
-    console.log('the things', req.body)
+    // console.log('the things', req.body)
 
         const event = await Event.create({ eventTitle, userId, content, eventImageUrl, numTickets, eventDate: new Date(), eventEnd });
 
