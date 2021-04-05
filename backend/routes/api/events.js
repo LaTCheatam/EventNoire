@@ -5,6 +5,7 @@ const asyncHandler = require('express-async-handler');
 
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
+
 const { Event } = require('../../db/models');
 const { check } = require('express-validator');
 const { handleValidationErrors } = require('../../utils/validation');
@@ -12,7 +13,8 @@ const { handleValidationErrors } = require('../../utils/validation');
 const router = express.Router();
 
 // ROUTE FOR SEARCHING SPECIFC KEYWORDS
-router.post('/events',  asyncHandler(async (req, res) => {
+router.post('/events', 
+  asyncHandler(async (req, res) => {
     const { query } = req.body;
     const events = await Event.findAll({
         where: {
@@ -53,7 +55,7 @@ router.get('/events/${id}'),
 
       res.render('events', {
         title: 'Your Event',
-        event 
+        event
       })
     })
 
