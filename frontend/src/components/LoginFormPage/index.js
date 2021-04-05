@@ -54,7 +54,6 @@ function LoginFormPage() {
           </label>    
       </div>
       <button className='login-btn' type="submit">Log In</button>
-      <button className='demo-btn' type="submitDemo">Demo</button>
     </form>
     </div>
   );

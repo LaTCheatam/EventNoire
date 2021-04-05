@@ -2,7 +2,7 @@ import React from 'react';
 import {getAllEvents} from '../../store/eventIndex'
 
 const SearchBar = ({keyword,setKeyword}) => {
-  const BarStyling = {width:"20rem",background:"#F0E9DC", border: "1px solid #891277", padding:"0.3rem", marginLeft: "1rem"};
+  const BarStyling = {width:"24rem",background:"#fffcf25a", border: "1px solid #891277", padding:"0.3rem", marginLeft: "1rem"};
 
 
   return (

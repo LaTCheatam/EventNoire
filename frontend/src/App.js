@@ -9,6 +9,7 @@ import * as sessionActions from './store/session';
 import Navigation from './components/Navigation';
 import EventCreateFormPage from './components/EventCreateFormPage';
 import EventSinglePage from './components/EventSinglePage';
+import SplashPage from './components/SplashPage';
 
 
 
@@ -24,6 +25,9 @@ function App() {
       <Navigation isLoaded={isLoaded} />
       {isLoaded && (
         <Switch>
+          <Route path="/">
+            <SplashPage /> 
+          </Route>
           <Route path="/create-event">
             <EventCreateFormPage />
           </Route>

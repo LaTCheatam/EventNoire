@@ -1,9 +1,8 @@
 .nav-container {
-    background-color: #F0E9DC;
-    display:flexbox;
+    background-color: #fffcf25a;
+    display: flexbox;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    justify-content: right;
     /* justify-items: center; */
     box-sizing: border-box;
     height: 65px;
@@ -21,12 +20,16 @@ form.search-bar-container {
     order: 3;
 }
 
+li#nav-content::marker {
+    color: #fffcf25a;
 
-/* .fas-btn {
-    position: relative;
-    display: inline-block;
-    padding: 1vw;
-} */
+}
+
+li#nav-content {
+    align-items: flex-end;
+    justify-self: flex-end;
+    margin-left: 20vw;
+}
 
 .fas fa-route {
     position: relative;
@@ -52,17 +55,16 @@ button {
 
 .nav-login {
     color: turquoise;
-    padding: 1vw 1vw;
+    padding: 7vw 1vw;
 }
 .nav-signup {
     color: rgb(120, 64, 224);
 }
 
-.nav-crevent{
+.nav-crevent {
     color: turquoise;
-    padding: 1vw 1vw;
+    padding: 1vw 4vw;
 }
-
 
 
 /* .profile-dropdown {
@@ -91,6 +93,8 @@ button {
     justify-content: space-around;
     color: #88C1EB;
     max-width: 1920px;
+    margin-left: 60vw;
+    margin-top: 5vh;
 }
 
 .logout-btn {
@@ -105,5 +109,4 @@ button {
     font-weight: 700;
 
 }
-
 
