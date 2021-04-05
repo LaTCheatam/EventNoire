@@ -37,7 +37,7 @@ const EventCreateForm = () => {
         };
 console.log('this is payload', payload )
         await dispatch(createEvent (payload)).then(() => {
-            history.push('/events')
+            history.push(`/events`)
         }).catch(async (res) => {
         const data = await res.json();
         if (data && data.errors) setErrors(data.errors);
